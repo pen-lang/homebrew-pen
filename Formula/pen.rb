@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Pen < Formula
   version '0.1.13'
   desc 'Pen programming language'
