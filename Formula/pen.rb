@@ -18,6 +18,7 @@ class Pen < Formula
   depends_on 'rust'
 
   def install
+    exit 1
     system 'cargo', 'build', '--locked', '--release'
     libexec.install 'target/release/pen'
 
