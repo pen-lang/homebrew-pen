@@ -1,0 +1,28 @@
+name: test
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - macos-latest
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew install pen-lang/pen/pen
+      - run: brew test pen-lang/pen/pen
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+      - uses: reviewdog/action-rubocop@v1
+        with:
+          github_token: ${{ secrets.github_token }}
