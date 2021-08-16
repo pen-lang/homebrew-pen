@@ -10,8 +10,6 @@ class Pen < Formula
 
   conflicts_with 'pen'
 
-  depends_on 'zsh'
-  depends_on 'uutils-coreutils'
   depends_on 'git'
   depends_on 'llvm@12'
   depends_on 'ninja'
@@ -22,8 +20,6 @@ class Pen < Formula
     libexec.install 'target/release/pen'
 
     paths = [
-      'zsh',
-      'uutils-coreutils',
       'git',
       'llvm@12',
       'ninja',
