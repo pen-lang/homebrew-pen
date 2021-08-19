@@ -44,7 +44,6 @@ class Pen < Formula
   end
 
   test do
-    ENV.prepend_path 'PATH', Formula['rust'].opt_bin
     ENV.prepend_path 'PATH', bin
 
     system 'pen', 'create', '.'
