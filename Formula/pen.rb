@@ -22,8 +22,7 @@ class Pen < Formula
     paths = [
       'git',
       'llvm@12',
-      'ninja',
-      'rust'
+      'ninja'
     ].map do |name|
       Formula[name].opt_bin
     end.join(':')
@@ -33,6 +32,9 @@ class Pen < Formula
       set -e
       export PEN_ROOT=#{prefix}
       export PATH=#{paths}:$PATH
+      if ! which rustup >/dev/null; then
+        export PATH=#{Formula['rust'].opt_bin}:$PATH
+      fi
       #{libexec / 'pen'} "$@"
     EOS
 
