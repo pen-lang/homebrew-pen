@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 class Pen < Formula
-  version '0.1.33'
+  version '0.1.34'
   desc 'Pen programming language'
   homepage 'https://github.com/pen-lang/pen'
   url "https://github.com/pen-lang/pen/archive/refs/tags/v#{version}.tar.gz"
-  sha256 '19c116180e7003bb1d1b9084dd3621954bfbf03ace664fd942a3500a398986bd'
+  sha256 '0440b567ac5f0f63634228c98d0340f365beb863cd75db39b67d559720ad0de9'
   license 'MIT'
 
   conflicts_with 'pen'
