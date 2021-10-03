@@ -11,6 +11,7 @@ class Pen < Formula
   conflicts_with 'pen'
 
   depends_on 'git'
+  depends_on 'jq'
   depends_on 'llvm@12'
   depends_on 'ninja'
   depends_on 'rust'
@@ -21,6 +22,7 @@ class Pen < Formula
 
     paths = [
       'git',
+      'jq',
       'llvm@12',
       'ninja'
     ].map do |name|
