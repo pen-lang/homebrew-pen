@@ -44,7 +44,7 @@ class Pen < Formula
     libexec.install 'pen.sh'
     bin.install_symlink (libexec / 'pen.sh') => 'pen'
 
-    lib.install Dir['cmd/*']
+    (prefix / 'cmd').install Dir['cmd/*']
     lib.install Dir['lib/*']
   end
 
