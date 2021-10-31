@@ -53,6 +53,7 @@ class Pen < Formula
 
     system 'pen', 'create', '.'
     system 'pen', 'build'
+    system 'pen', 'test'
     system './app'
   end
 end
