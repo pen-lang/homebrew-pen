@@ -12,7 +12,7 @@ class Pen < Formula
 
   depends_on 'git'
   depends_on 'jq'
-  depends_on 'llvm@12'
+  depends_on 'llvm@13'
   depends_on 'ninja'
   depends_on 'rust'
 
@@ -23,7 +23,7 @@ class Pen < Formula
     paths = [
       'git',
       'jq',
-      'llvm@12',
+      'llvm@13',
       'ninja'
     ].map do |name|
       Formula[name].opt_bin
