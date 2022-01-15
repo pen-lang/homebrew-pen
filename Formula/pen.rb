@@ -15,6 +15,7 @@ class Pen < Formula
   depends_on 'llvm@13'
   depends_on 'ninja'
   depends_on 'rust'
+  depends_on 'pen-lang/pen/turtle'
 
   def install
     system 'cargo', 'build', '--locked', '--release'
