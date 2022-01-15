@@ -17,7 +17,7 @@ jobs:
           if ! grep "version '$version'" Formula/turtle.rb; then
             echo should_release=true >> $GITHUB_ENV
           fi
-  turtle:
+  release:
     needs:
       - tag_check
     if: needs.tag_check.outputs.should_release == 'true'
