@@ -33,3 +33,4 @@ jobs:
         with:
           title: Bump version of Turtle
           branch: chore/version/turtle
+          base: main
