@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 class Turtle < Formula
-  version '0.2.7'
+  version '0.2.8'
   desc 'Ninja-compatible build system for high-level programming languages'
   homepage 'https://github.com/raviqqe/turtle'
   url "https://github.com/raviqqe/turtle/archive/refs/tags/v#{version}.tar.gz"
-  sha256 '6f32f10202a89cf43e7ed890b95479b162cdc2ac92c5f8988aac59270e736942'
+  sha256 '8ff6add83f114cd9f29fccd23e378dc238127953bcd665238eae5e15461510fd'
   license 'MIT'
 
   conflicts_with 'turtle'
