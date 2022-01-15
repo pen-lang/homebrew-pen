@@ -31,6 +31,6 @@ jobs:
           sed -i "s/sha256 .*/sha256 '$hash'/" Formula/turtle.rb
       - uses: peter-evans/create-pull-request@v3
         with:
-          title: Bump version of Turtle
+          title: Update Turtle
           branch: chore/version/turtle
           base: main
