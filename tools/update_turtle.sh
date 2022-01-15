@@ -2,6 +2,7 @@
 
 set -e
 
+rm -rf tmp
 mkdir -p tmp
 
 git clone https://github.com/raviqqe/turtle-build tmp/turtle
