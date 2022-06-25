@@ -16,7 +16,7 @@ class Pen < Formula
 
   def install
     system "cargo", "install", "--locked", "--path", "cmd/pen"
-    mv bin / "pen", libexec
+    libexec.install "target/release/pen"
 
     paths = [
       "git",
