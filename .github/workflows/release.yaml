@@ -12,9 +12,6 @@ jobs:
         os:
           - ubuntu-latest
           - macos-latest
-        formula:
-          - pen
-          - turtle
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
