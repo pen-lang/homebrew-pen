@@ -15,7 +15,7 @@ class Pen < Formula
   depends_on "rust"
 
   def install
-    system "cargo", "install", *std_cargo_args
+    system "cargo", "install", *std_cargo_args, "--path", "cmd/pen"
     mv bin / "pen", libexec
 
     paths = [
