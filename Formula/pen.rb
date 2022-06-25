@@ -8,8 +8,6 @@ class Pen < Formula
   sha256 '599d0999119a3ca928d834996ef65f603497a6ad1b813be9e30af4fc6f4a2bcf'
   license 'MIT'
 
-  conflicts_with 'pen'
-
   depends_on 'git'
   depends_on 'jq'
   depends_on 'llvm@14'
