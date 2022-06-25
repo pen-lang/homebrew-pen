@@ -1,18 +1,18 @@
 # frozen_string_literal: true
 
 class Pen < Formula
-  version '0.3.15'
+  version '0.4.0'
   desc 'Pen programming language'
   homepage 'https://github.com/pen-lang/pen'
   url "https://github.com/pen-lang/pen/archive/refs/tags/v#{version}.tar.gz"
-  sha256 '264cf492a0a7bda285c85c63cfff502c5d46373478ac1bd8618d093eafb291a6'
+  sha256 '599d0999119a3ca928d834996ef65f603497a6ad1b813be9e30af4fc6f4a2bcf'
   license 'MIT'
 
   conflicts_with 'pen'
 
   depends_on 'git'
   depends_on 'jq'
-  depends_on 'llvm@13'
+  depends_on 'llvm@14'
   depends_on 'ninja'
   depends_on 'rust'
   depends_on 'pen-lang/pen/turtle'
@@ -24,7 +24,7 @@ class Pen < Formula
     paths = [
       'git',
       'jq',
-      'llvm@13',
+      'llvm@14',
       'ninja'
     ].map do |name|
       Formula[name].opt_bin
@@ -46,7 +46,7 @@ class Pen < Formula
     bin.install_symlink (libexec / 'pen.sh') => 'pen'
 
     (prefix / 'cmd').install Dir['cmd/*']
-    lib.install Dir['lib/*']
+    prefix.install Dir['packages']
   end
 
   test do
