@@ -1,0 +1,22 @@
+name: release
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+jobs:
+  bottle:
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - macos-latest
+        formula:
+          - pen
+          - turtle
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew test-bot
