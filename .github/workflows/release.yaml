@@ -23,7 +23,7 @@ jobs:
           path: "*.bottle.*"
   release:
     needs: bottle
-    if: contains(github.event.pull_request.labels.*.name, bottle)
+    if: contains(github.event.pull_request.labels.*.name, "bottle")
     runs-on: ubuntu-latest
     steps:
       - uses: Homebrew/actions/setup-homebrew@master
