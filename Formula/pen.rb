@@ -16,9 +16,8 @@ class Pen < Formula
   depends_on "rust"
 
   def install
-    # rubocop:disable-next-line
-    system "cargo", "build", "--locked", "--release"
-    libexec.install "target/release/pen"
+    system "cargo", "install", *std_cargo_args
+    mv bin / "bin", libexec
 
     paths = [
       "git",
