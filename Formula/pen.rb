@@ -17,7 +17,7 @@ class Pen < Formula
 
   def install
     system "cargo", "install", *std_cargo_args
-    mv bin / "bin", libexec
+    mv bin / "pen", libexec
 
     paths = [
       "git",
