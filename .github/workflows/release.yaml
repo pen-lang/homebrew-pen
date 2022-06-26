@@ -1,0 +1,36 @@
+name: release
+on:
+  pull_request:
+  pull_request_target:
+    types:
+      - labeled
+jobs:
+  bottle:
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - macos-latest
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew test-bot
+      - uses: actions/upload-artifact@v3
+        with:
+          name: bottles
+          path: "*.bottle.*"
+  release:
+    needs: bottle
+    if: contains(github.event.pull_request.labels.*.name, 'bottle')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Homebrew/actions/setup-homebrew@master
+      - uses: Homebrew/actions/git-user-config@master
+      - run: brew pr-pull --debug --tap=$GITHUB_REPOSITORY ${{ github.event.pull_request.number }}
+        env:
+          HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
+      - uses: Homebrew/actions/git-try-push@master
+        with:
+          token: ${{ github.token }}
