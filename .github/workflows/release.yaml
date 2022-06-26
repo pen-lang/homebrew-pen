@@ -20,7 +20,7 @@ jobs:
           fail_on_unmatched_files: true
   release:
     needs: bottle
-    if: contains(github.event.pull_request.labels.*.name, 'bottle')
+    if: contains(github.event.pull_request.labels.*.name, 'release')
     runs-on: ubuntu-latest
     steps:
       - uses: Homebrew/actions/setup-homebrew@master
