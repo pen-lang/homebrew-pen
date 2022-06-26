@@ -17,7 +17,6 @@ jobs:
         with:
           name: bottles
           path: "*.bottle.*"
-          if-no-files-found: error
   release:
     needs: bottle
     if: contains(github.event.pull_request.labels.*.name, 'release')
