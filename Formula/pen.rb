@@ -6,7 +6,15 @@ class Pen < Formula
   url "https://github.com/pen-lang/pen/archive/refs/tags/v0.4.0.tar.gz"
   sha256 "599d0999119a3ca928d834996ef65f603497a6ad1b813be9e30af4fc6f4a2bcf"
   license "MIT"
-  revision 1
+  revision 2
+
+  bottle do
+    root_url "https://ghcr.io/v2/pen-lang/pen"
+  end
+
+  pour_bottle? do
+    true
+  end
 
   depends_on "git"
   depends_on "jq"
