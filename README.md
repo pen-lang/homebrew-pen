@@ -1,6 +1,6 @@
 # homebrew-pen
 
-Homebrew tap for Pen programming language
+Homebrew tap for the Pen programming language
 
 ## License
 
