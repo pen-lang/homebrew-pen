@@ -10,8 +10,10 @@ class Turtle < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/pen-lang/pen"
-    sha256 cellar: :any, monterey:     "0000000000000000000000000000000000000000000000000000000000000000"
-    sha256 cellar: :any, x86_64_linux: "0000000000000000000000000000000000000000000000000000000000000000"
+  end
+
+  pour_bottle? do
+    true
   end
 
   depends_on "rust" => :build
