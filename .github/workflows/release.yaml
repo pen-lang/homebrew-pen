@@ -17,6 +17,7 @@ jobs:
         with:
           name: bottles
           path: "*.bottle.*"
+          fail_on_unmatched_files: true
   release:
     needs: bottle
     if: contains(github.event.pull_request.labels.*.name, 'bottle')
