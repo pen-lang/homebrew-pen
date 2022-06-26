@@ -7,14 +7,6 @@ class Pen < Formula
   sha256 "c8681c3c387e36863a32e59b8419209258535f29502ea96aecc4df646439acc7"
   license "MIT"
 
-  bottle do
-    root_url "https://ghcr.io/v2/pen-lang/pen"
-  end
-
-  pour_bottle? do
-    true
-  end
-
   depends_on "git"
   depends_on "jq"
   depends_on "llvm@14"

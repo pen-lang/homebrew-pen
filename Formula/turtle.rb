@@ -8,14 +8,6 @@ class Turtle < Formula
   license "MIT"
   revision 2
 
-  bottle do
-    root_url "https://ghcr.io/v2/pen-lang/pen"
-  end
-
-  pour_bottle? do
-    true
-  end
-
   depends_on "rust" => :build
 
   def install
