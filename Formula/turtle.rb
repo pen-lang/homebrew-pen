@@ -8,6 +8,11 @@ class Turtle < Formula
   license "MIT"
   revision 1
 
+  bottle do
+    sha256 cellar: :any, monterey: "0000000000000000000000000000000000000000000000000000000000000000"
+    sha256 cellar: :any, x86_64_linux: "0000000000000000000000000000000000000000000000000000000000000000"
+  end
+
   depends_on "rust" => :build
 
   def install

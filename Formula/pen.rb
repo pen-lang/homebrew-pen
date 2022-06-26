@@ -8,6 +8,11 @@ class Pen < Formula
   license "MIT"
   revision 1
 
+  bottle do
+    sha256 cellar: :any, monterey: "0000000000000000000000000000000000000000000000000000000000000000"
+    sha256 cellar: :any, x86_64_linux: "0000000000000000000000000000000000000000000000000000000000000000"
+  end
+
   depends_on "git"
   depends_on "jq"
   depends_on "llvm@14"
