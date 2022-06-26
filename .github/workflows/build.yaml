@@ -1,0 +1,26 @@
+name: build
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  bottle:
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - macos-latest
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew test-bot
+      - uses: actions/upload-artifact@v3
+        with:
+          name: bottles
+          path: "*.bottle.*"
