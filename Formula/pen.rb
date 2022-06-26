@@ -3,10 +3,9 @@
 class Pen < Formula
   desc "Programming language for scalable development"
   homepage "https://github.com/pen-lang/pen"
-  url "https://github.com/pen-lang/pen/archive/refs/tags/v0.4.0.tar.gz"
-  sha256 "599d0999119a3ca928d834996ef65f603497a6ad1b813be9e30af4fc6f4a2bcf"
+  url "https://github.com/pen-lang/pen/archive/refs/tags/v0.4.1.tar.gz"
+  sha256 'c8681c3c387e36863a32e59b8419209258535f29502ea96aecc4df646439acc7'
   license "MIT"
-  revision 2
 
   bottle do
     root_url "https://ghcr.io/v2/pen-lang/pen"
