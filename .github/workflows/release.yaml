@@ -17,7 +17,6 @@ jobs:
         with:
           name: bottles
           path: "*.bottle.*"
-          fail_on_unmatched_files: true
   release:
     needs: bottle
     if: contains(github.event.pull_request.labels.*.name, 'release')
@@ -33,4 +32,5 @@ jobs:
           HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
       - uses: Homebrew/actions/git-try-push@master
         with:
+          branch: main
           token: ${{ github.token }}
