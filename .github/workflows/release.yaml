@@ -1,9 +1,6 @@
 name: release
 on:
   pull_request:
-  pull_request_target:
-    types:
-      - labeled
 jobs:
   bottle:
     strategy:
@@ -14,9 +11,6 @@ jobs:
           - macos-latest
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.head_ref }}
       - uses: Homebrew/actions/setup-homebrew@master
       - run: brew test-bot
       - uses: actions/upload-artifact@v3
