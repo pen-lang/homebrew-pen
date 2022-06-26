@@ -32,4 +32,5 @@ jobs:
           HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
       - uses: Homebrew/actions/git-try-push@master
         with:
+          branch: main
           token: ${{ github.token }}
