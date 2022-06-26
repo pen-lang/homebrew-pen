@@ -17,12 +17,16 @@ jobs:
         with:
           name: bottles
           path: "*.bottle.*"
+          fail_on_unmatched_files: true
   release:
     needs: bottle
-    if: contains(github.event.pull_request.labels.*.name, 'bottle')
+    if: contains(github.event.pull_request.labels.*.name, 'release')
     runs-on: ubuntu-latest
     steps:
       - uses: Homebrew/actions/setup-homebrew@master
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.base_ref }}
       - uses: Homebrew/actions/git-user-config@master
       - run: brew pr-pull --debug --tap=${{ github.repository }} ${{ github.event.pull_request.number }}
         env:
