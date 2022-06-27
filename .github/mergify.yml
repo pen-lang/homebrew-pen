@@ -1,8 +1,10 @@
 pull_request_rules:
-  - name: version
+  - name: release
     conditions:
       - author=raviqqe
-      - title=Bump version
+      - check-success~=build
+      - check-success~=test
     actions:
-      merge:
-        method: squash
+      label:
+        add:
+          - release
