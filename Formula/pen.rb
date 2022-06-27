@@ -6,6 +6,7 @@ class Pen < Formula
   url "https://github.com/pen-lang/pen/archive/refs/tags/v0.4.1.tar.gz"
   sha256 "c8681c3c387e36863a32e59b8419209258535f29502ea96aecc4df646439acc7"
   license "MIT"
+  revision 1
 
   depends_on "git"
   depends_on "jq"
