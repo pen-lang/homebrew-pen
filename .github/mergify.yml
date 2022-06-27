@@ -2,8 +2,8 @@ pull_request_rules:
   - name: release
     conditions:
       - author=raviqqe
-      - check-success~=build
-      - check-success~=test
+      - check-success=build (ubuntu-latest)
+      - check-success=build (macos-latest)
     actions:
       label:
         add:
