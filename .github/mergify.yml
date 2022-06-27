@@ -4,5 +4,6 @@ pull_request_rules:
       - author=raviqqe
       - title=Bump version
     actions:
-      merge:
-        method: squash
+      label:
+        add:
+          - release
