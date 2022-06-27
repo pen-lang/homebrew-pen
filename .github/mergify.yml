@@ -1,8 +1,9 @@
 pull_request_rules:
-  - name: version
+  - name: release
     conditions:
       - author=raviqqe
-      - title=Bump version
+      - check-success~=bottle
+      - check-success~=test
     actions:
       label:
         add:
