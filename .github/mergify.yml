@@ -2,7 +2,7 @@ pull_request_rules:
   - name: release
     conditions:
       - author=raviqqe
-      - check-success~=bottle
+      - check-success~=build
       - check-success~=test
     actions:
       label:
