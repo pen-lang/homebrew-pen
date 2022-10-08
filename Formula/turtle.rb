@@ -3,10 +3,9 @@
 class Turtle < Formula
   desc "Ninja-compatible build system for high-level programming languages"
   homepage "https://github.com/raviqqe/turtle"
-  url "https://github.com/raviqqe/turtle/archive/refs/tags/v0.3.3.tar.gz"
-  sha256 "7a71ccaf0edcf4cacd693f2e0ad61855e1b8770e7a9cdc37a22fb5a956b7c4c2"
+  url "https://github.com/raviqqe/turtle/archive/refs/tags/v0.3.8.tar.gz"
+  sha256 "92542caf9e182711c3845193e1d9f452ad5991128c909912a667c46bf5b63d37"
   license "MIT"
-  revision 3
 
   bottle do
     root_url "https://github.com/pen-lang/homebrew-pen/releases/download/turtle-0.3.3_3"
