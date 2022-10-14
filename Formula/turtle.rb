@@ -8,9 +8,9 @@ class Turtle < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/pen-lang/homebrew-pen/releases/download/turtle-0.3.8"
-    sha256 cellar: :any_skip_relocation, big_sur:      "486c8297ddb7afb0f755074f0fb32b1e30ed34e6f69a78122015a7aa24f52e38"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "7fba0bd5a2e771c66ca7720fbc6447a68e9b55e85eca1103e9a439adab01f624"
+    root_url "https://github.com/pen-lang/homebrew-pen/releases/download/turtle-0.3.9"
+    sha256 cellar: :any_skip_relocation, big_sur:      "482eae016e992c5770448ac2d188c6555dfa48a67c9a7a1b02728a3da5083c12"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "63188cff04ceb6719413569e6ba8beafa32b438ef24c194624caefa88b3534e6"
   end
 
   depends_on "rust" => :build
