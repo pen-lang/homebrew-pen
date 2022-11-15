@@ -3,8 +3,8 @@
 class Turtle < Formula
   desc "Ninja-compatible build system for high-level programming languages"
   homepage "https://github.com/raviqqe/turtle"
-  url "https://github.com/raviqqe/turtle/archive/refs/tags/v0.3.9.tar.gz"
-  sha256 "9db8fdbbd3cd0404b6c7c8626f4511c752f46b6023f871f4439f9d8921756a12"
+  url "https://github.com/raviqqe/turtle/archive/refs/tags/v0.4.3.tar.gz"
+  sha256 "30b10db4d9e09476aa99040e4c0d8939941281cfd31c4ea7c24a06da661e281f"
   license "MIT"
 
   bottle do
