@@ -2,7 +2,7 @@ name: test
 on:
   pull_request:
 jobs:
-  build:
+  test:
     strategy:
       fail-fast: false
       matrix:
