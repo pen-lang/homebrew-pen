@@ -56,8 +56,8 @@ class Pen < Formula
     ENV.prepend_path "PATH", bin
 
     system "pen", "create", "."
-    system "pen", "build"
     system "pen", "test"
+    system "pen", "build"
     system "./app"
   end
 end
