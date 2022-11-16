@@ -1,0 +1,15 @@
+name: test
+on:
+  pull_request:
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - macos-latest
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew test --verbose pen-lang/pen/pen
