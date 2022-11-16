@@ -12,4 +12,5 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew install --verbose --build-bottle pen-lang/pen/pen
       - run: brew test --verbose pen-lang/pen/pen
