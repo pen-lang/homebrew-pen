@@ -3,8 +3,8 @@
 class Pen < Formula
   desc "Programming language for scalable development"
   homepage "https://github.com/pen-lang/pen"
-  url "https://github.com/pen-lang/pen/archive/refs/tags/v0.5.1.tar.gz"
-  sha256 "098f19b9f9acdc920d7566908e6e4ade44e19b67bf7cd7da028ad590827b2cb4"
+  url "https://github.com/pen-lang/pen/archive/refs/tags/v0.5.2.tar.gz"
+  sha256 "0bc66907ee8fbed4c933ed7393870dee5b069b444fc10a9a85039efcedba3450"
   license "MIT"
 
   bottle do
