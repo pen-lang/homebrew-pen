@@ -8,9 +8,9 @@ class Pen < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/pen-lang/homebrew-pen/releases/download/pen-0.5.3"
-    sha256 cellar: :any_skip_relocation, monterey:     "f968b1d907bd0ae8e30a004656beb5698a0bb968660ae4621e01b4be9942516c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "834b7393792e668d32ff16780e70c154c679561a9810cf003888248e33d92df7"
+    root_url "https://github.com/pen-lang/homebrew-pen/releases/download/pen-0.6.0"
+    sha256 cellar: :any_skip_relocation, monterey:     "0422af6777b7d8da392eece4c2b636354aa888018bc7b921cba27e2d4715eab0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "167df14f1dcde81c84264011cb5025ec1713b5330791a7b9566e4b4091f56805"
   end
 
   depends_on "git"
