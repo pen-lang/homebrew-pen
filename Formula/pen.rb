@@ -21,7 +21,7 @@ class Pen < Formula
   depends_on "rust"
 
   def install
-    system "cargo", "install", *std_cargo_args(path: "cmd/pen")
+    system "#{bin}/cargo", "install", *std_cargo_args(path: "cmd/pen")
     libexec.install "target/release/pen"
 
     paths = [
@@ -55,9 +55,9 @@ class Pen < Formula
   test do
     ENV.prepend_path "PATH", bin
 
-    system "pen", "create", "."
-    system "pen", "test"
-    system "pen", "build"
+    system "#{bin}/pen", "create", "."
+    system "#{bin}/pen", "test"
+    system "#{bin}/pen", "build"
     system "./app"
   end
 end
