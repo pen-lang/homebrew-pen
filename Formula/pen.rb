@@ -21,7 +21,7 @@ class Pen < Formula
   depends_on "rust"
 
   def install
-    system "#{bin}/cargo", "install", *std_cargo_args(path: "cmd/pen")
+    system "cargo", "install", *std_cargo_args(path: "cmd/pen")
     libexec.install "target/release/pen"
 
     paths = [

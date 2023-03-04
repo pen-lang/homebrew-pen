@@ -16,7 +16,7 @@ class Turtle < Formula
   depends_on "rust" => :build
 
   def install
-    system "#{bin}/cargo", "install", *std_cargo_args
+    system "cargo", "install", *std_cargo_args
   end
 
   test do
