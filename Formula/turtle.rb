@@ -20,6 +20,6 @@ class Turtle < Formula
   end
 
   test do
-    system "turtle", "--version"
+    system "#{bin}/turtle", "--version"
   end
 end
