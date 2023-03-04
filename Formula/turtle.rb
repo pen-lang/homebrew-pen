@@ -13,7 +13,7 @@ class Turtle < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "8aed9fbed3ca12feea30250cd5ef738abb102e967d25dad276bcca2cd3a7a88d"
   end
 
-  depends_on "rust" => :build
+  depends_on "rust" => [:build, :test]
 
   def install
     system "cargo", "install", *std_cargo_args
