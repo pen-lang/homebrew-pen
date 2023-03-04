@@ -12,7 +12,6 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: Homebrew/actions/setup-homebrew@master
-      - run: brew install rust
       - run: brew test-bot
       - uses: actions/upload-artifact@v3
         with:
