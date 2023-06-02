@@ -3,8 +3,8 @@
 class Pen < Formula
   desc "Programming language for scalable development"
   homepage "https://github.com/pen-lang/pen"
-  url "https://github.com/pen-lang/pen/archive/refs/tags/v0.6.2.tar.gz"
-  sha256 "290a224ee7d09535c94234ac93bfdab135606a34b627e059051c8ee63f22947f"
+  url "https://github.com/pen-lang/pen/archive/refs/tags/v0.6.3.tar.gz"
+  sha256 "a751537946f4480353f0a31811ca10ac1869a2985a178fab67f9cc439a6a74f2"
   license "MIT"
 
   bottle do
@@ -15,7 +15,7 @@ class Pen < Formula
 
   depends_on "git"
   depends_on "jq"
-  depends_on "llvm@14"
+  depends_on "llvm"
   depends_on "ninja"
   depends_on "pen-lang/pen/turtle"
   depends_on "rust"
@@ -24,11 +24,11 @@ class Pen < Formula
     system "cargo", "install", *std_cargo_args(path: "cmd/pen")
     libexec.install "target/release/pen"
 
-    paths = [
-      "git",
-      "jq",
-      "llvm@14",
-      "ninja",
+    paths = %w[
+      git
+      jq
+      llvm
+      ninja
     ].map do |name|
       Formula[name].opt_bin
     end.join(":")
