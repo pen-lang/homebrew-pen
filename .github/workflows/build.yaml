@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: Homebrew/actions/setup-homebrew@master
       - run: brew test-bot
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: bottles
           path: "*.bottle.*"
