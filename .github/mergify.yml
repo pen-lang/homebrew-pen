@@ -3,7 +3,7 @@ pull_request_rules:
     conditions:
       - author=raviqqe
       - check-success=build (ubuntu-latest)
-      - check-success=build (macos-latest)
+      - check-success=build (macos-14)
     actions:
       label:
         add:
