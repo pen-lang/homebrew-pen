@@ -13,12 +13,13 @@ class Pen < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "3caa1426fe64bbb82a8c245740d4b5010080c0d591a7a4897e8aa53e7aa109c5"
   end
 
+  depends_on "rust" => [:build, :test]
   depends_on "git"
   depends_on "jq"
   depends_on "llvm"
   depends_on "ninja"
-  depends_on "rust"
   depends_on "pen-lang/pen/turtle"
+  depends_on "rust" => :optional
 
   def install
     system "cargo", "install", *std_cargo_args(path: "cmd/pen")
