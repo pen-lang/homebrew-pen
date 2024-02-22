@@ -8,7 +8,7 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
-          - macos-latest
+          - macos-14
     runs-on: ${{ matrix.os }}
     steps:
       - uses: homebrew/actions/setup-homebrew@master
