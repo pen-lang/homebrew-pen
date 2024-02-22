@@ -17,8 +17,8 @@ class Pen < Formula
   depends_on "jq"
   depends_on "llvm"
   depends_on "ninja"
-  depends_on "pen-lang/pen/turtle"
   depends_on "rust"
+  depends_on "pen-lang/pen/turtle"
 
   def install
     system "cargo", "install", *std_cargo_args(path: "cmd/pen")
