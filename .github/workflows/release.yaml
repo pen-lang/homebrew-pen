@@ -10,12 +10,12 @@ jobs:
     env:
       HOMEBREW_NO_INSTALL_FROM_API: 1
     steps:
-      - uses: Homebrew/actions/setup-homebrew@master
-      - uses: Homebrew/actions/git-user-config@master
+      - uses: homebrew/actions/setup-homebrew@master
+      - uses: homebrew/actions/git-user-config@master
       - run: brew pr-pull --debug --workflows build.yaml --tap=${{ github.repository }} ${{ github.event.pull_request.number }}
         env:
           HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
-      - uses: Homebrew/actions/git-try-push@master
+      - uses: homebrew/actions/git-try-push@master
         with:
           branch: main
           token: ${{ github.token }}
